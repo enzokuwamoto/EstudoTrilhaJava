@@ -1,0 +1,202 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffc9516c1c4, pid=43360, tid=37484
+#
+# JRE version: OpenJDK Runtime Environment (25.0.1+8) (build 25.0.1+8-27)
+# Java VM: OpenJDK 64-Bit Server VM (25.0.1+8-27, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# Problematic frame:
+# C  [cyjagent.dll+0xc1c4]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -javaagent:C:\Users\enzoyano\AppData\Local\Programs\IntelliJ IDEA Community Edition 2025.2.4\lib\idea_rt.jar=51857 -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -agentpath:C:\Program Files\Palo Alto Networks\Traps\cyjagent.dll ZZCinnerclasses.test.OuterClassesTest01
+
+Host: 12th Gen Intel(R) Core(TM) i5-1235U, 12 cores, 15G,  Windows 11 , 64 bit Build 22621 (10.0.22621.5415)
+Time: Mon Jan 26 19:59:04 2026 Hora oficial do Brasil elapsed time: 0.169150 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000169337862e0):  JavaThread "Monitor Ctrl-Break" daemon [_thread_in_native, id=37484, stack(0x00000032b4a00000,0x00000032b4b00000) (1024K)]
+
+Stack: [0x00000032b4a00000,0x00000032b4b00000],  sp=0x00000032b4afbd90,  free space=1007k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [cyjagent.dll+0xc1c4]  (no source info available)
+V  [jvm.dll+0x64a5e8]  (no source info available)
+V  [jvm.dll+0x641df2]  (no source info available)
+V  [jvm.dll+0x641f05]  (no source info available)
+V  [jvm.dll+0x6685c2]  (no source info available)
+V  [jvm.dll+0x8d5049]  (no source info available)
+V  [jvm.dll+0x8d4bf9]  (no source info available)
+V  [jvm.dll+0x8d5d1a]  (no source info available)
+V  [jvm.dll+0x8d6426]  (no source info available)
+V  [jvm.dll+0x8d1452]  (no source info available)
+V  [jvm.dll+0x8d4ff6]  (no source info available)
+V  [jvm.dll+0x8d4bf9]  (no source info available)
+V  [jvm.dll+0x8d5d1a]  (no source info available)
+V  [jvm.dll+0x8d6426]  (no source info available)
+V  [jvm.dll+0x8d1452]  (no source info available)
+V  [jvm.dll+0x8d4f85]  (no source info available)
+V  [jvm.dll+0x8d4bf9]  (no source info available)
+V  [jvm.dll+0x8d5d1a]  (no source info available)
+V  [jvm.dll+0x8d6252]  (no source info available)
+V  [jvm.dll+0x8d5fa6]  (no source info available)
+V  [jvm.dll+0x2e5322]  (no source info available)
+V  [jvm.dll+0x474a6f]  (no source info available)
+C  0x00000169232eaeb5  (no source info available)
+
+The last pc belongs to instanceof (printed below).
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  sun.nio.ch.Streams.of(Ljava/nio/channels/ReadableByteChannel;)Ljava/io/InputStream;+1 java.base@25.0.1
+j  java.nio.channels.Channels.newInputStream(Ljava/nio/channels/ReadableByteChannel;)Ljava/io/InputStream;+8 java.base@25.0.1
+j  java.nio.file.spi.FileSystemProvider.newInputStream(Ljava/nio/file/Path;[Ljava/nio/file/OpenOption;)Ljava/io/InputStream;+98 java.base@25.0.1
+j  java.nio.file.Files.newInputStream(Ljava/nio/file/Path;[Ljava/nio/file/OpenOption;)Ljava/io/InputStream;+6 java.base@25.0.1
+j  java.security.Security$SecPropLoader.loadFromPath(Ljava/nio/file/Path;Ljava/security/Security$SecPropLoader$LoadingMode;)V+104 java.base@25.0.1
+j  java.security.Security$SecPropLoader.loadMaster()V+28 java.base@25.0.1
+j  java.security.Security$SecPropLoader.loadAll()V+0 java.base@25.0.1
+j  java.security.Security.initialize()V+0 java.base@25.0.1
+j  java.security.Security.<clinit>()V+19 java.base@25.0.1
+v  ~StubRoutines::call_stub 0x00000169232d12ed
+j  sun.security.util.SecurityProperties.getOverridableProperty(Ljava/lang/String;)Ljava/lang/String;+10 java.base@25.0.1
+j  sun.security.util.SecurityProperties.includedInExceptions(Ljava/lang/String;)Z+2 java.base@25.0.1
+j  sun.security.util.SecurityProperties.<clinit>()V+2 java.base@25.0.1
+v  ~StubRoutines::call_stub 0x00000169232d12ed
+j  jdk.internal.util.Exceptions.setup()V+15 java.base@25.0.1
+j  java.net.InetAddress.<clinit>()V+43 java.base@25.0.1
+v  ~StubRoutines::call_stub 0x00000169232d12ed
+j  java.net.InetSocketAddress.<init>(Ljava/lang/String;I)V+15 java.base@25.0.1
+j  java.net.Socket.<init>(Ljava/lang/String;I)V+11 java.base@25.0.1
+j  com.intellij.rt.execution.application.AppMainV2$1.run()V+10
+v  ~StubRoutines::call_stub 0x00000169232d12ed
+
+siginfo: EXCEPTION_ACCESS_VIOLATION (0xc0000005), reading address 0x0000000000000000
+
+
+Registers:
+RAX=0x0000000000000000, RBX=0x0000016933786728, RCX=0x0000000000000000, RDX=0x000001691136c690
+RSP=0x00000032b4afbd90, RBP=0x000001691bd8f8d0, RSI=0x0000000000000000, RDI=0x00000169337bc498
+R8 =0x00000169110e2f40, R9 =0x0000000000000001, R10=0x0000000000000003, R11=0x00000032b4afbc10
+R12=0x00000169337bc498, R13=0x00000169337862e0, R14=0x00000169337862e0, R15=0x0000000000000000
+RIP=0x00007ffc9516c1c4, EFLAGS=0x0000000000010202
+
+XMM[0]=0x0000000000000000 0x0000000000000000
+XMM[1]=0x0000000000000000 0x0000000000000000
+XMM[2]=0x0000000000000000 0x0000000000000000
+XMM[3]=0x0000000000000000 0x0000000000000000
+XMM[4]=0x0000000000000000 0x0000000000000000
+XMM[5]=0x0000000000000000 0x0000000000000000
+XMM[6]=0x0000000000000000 0x0000000000000000
+XMM[7]=0x0000000000000000 0x0000000000000000
+XMM[8]=0x0000000000000000 0x0000000000000000
+XMM[9]=0x0000000000000000 0x0000000000000000
+XMM[10]=0x0000000000000000 0x0000000000000000
+XMM[11]=0x0000000000000000 0x0000000000000000
+XMM[12]=0x0000000000000000 0x0000000000000000
+XMM[13]=0x0000000000000000 0x0000000000000000
+XMM[14]=0x0000000000000000 0x0000000000000000
+XMM[15]=0x0000000000000000 0x0000000000000000
+  MXCSR=0x00001fa0
+
+
+Register to memory mapping:
+
+RAX=0x0 is null
+RBX=0x0000016933786728 points into unknown readable memory: 0x00007ffbf3666b50 | 50 6b 66 f3 fb 7f 00 00
+RCX=0x0 is null
+RDX=0x000001691136c690 points into unknown readable memory: 0x00000169337862e0 | e0 62 78 33 69 01 00 00
+RSP=0x00000032b4afbd90 is pointing into the stack for thread: 0x00000169337862e0
+RBP=0x000001691bd8f8d0 points into unknown readable memory: 0x000001691bce9ac0 | c0 9a ce 1b 69 01 00 00
+RSI=0x0 is null
+RDI=0x00000169337bc498 points into unknown readable memory: 0x6f696e2f6176616a | 6a 61 76 61 2f 6e 69 6f
+R8 =0x00000169110e2f40 points into unknown readable memory: 0x00000169110e0d50 | 50 0d 0e 11 69 01 00 00
+R9 =0x0000000000000001 is an unknown value
+R10=0x0000000000000003 is an unknown value
+R11=0x00000032b4afbc10 is pointing into the stack for thread: 0x00000169337862e0
+R12=0x00000169337bc498 points into unknown readable memory: 0x6f696e2f6176616a | 6a 61 76 61 2f 6e 69 6f
+R13=0x00000169337862e0 is a thread
+R14=0x00000169337862e0 is a thread
+R15=0x0 is null
+
+Top of Stack: (sp=0x00000032b4afbd90)
+0x00000032b4afbd90:   00000169337bc498 0000016933786728   ..{3i...(gx3i...
+0x00000032b4afbda0:   0000000000000000 00007ffc8a992910   .........)......
+0x00000032b4afbdb0:   00000169112b23d0 00000169337862e0   .#+.i....bx3i...
+0x00000032b4afbdc0:   00000032b4afbfb0 000001691bd8f8d0   ....2.......i...
+0x00000032b4afbdd0:   0000000000000020 0000000000000020    ....... .......
+0x00000032b4afbde0:   00000169112b23d0 00000032b4afbfe8   .#+.i.......2...
+0x00000032b4afbdf0:   00000032b4afbfe0 00007ffbf2fca5e8   ....2...........
+0x00000032b4afbe00:   00000169112b23d0 0000000000000000   .#+.i...........
+0x00000032b4afbe10:   00000032b4afbfb0 0000000000000000   ....2...........
+0x00000032b4afbe20:   00000169337bc498 0000000000000000   ..{3i...........
+0x00000032b4afbe30:   0000016900000332 0000016930a6e5c8   2...i......0i...
+0x00000032b4afbe40:   00000032b4afbf38 00000032b4afbe58   8...2...X...2...
+0x00000032b4afbe50:   0000016900000000 0000000000000000   ....i...........
+0x00000032b4afbe60:   0000000000000000 0000000000000000   ................
+0x00000032b4afbe70:   000001693372b640 00000169337bc480   @.r3i.....{3i...
+0x00000032b4afbe80:   00000169337bc4c0 00000169337c4470   ..{3i...pD|3i...
+0x00000032b4afbe90:   00000000000083b0 00000169337862e0   .........bx3i...
+0x00000032b4afbea0:   00000169337862e0 000001693372b780   .bx3i.....r3i...
+0x00000032b4afbeb0:   000001693370c000 000001693370c038   ..p3i...8.p3i...
+0x00000032b4afbec0:   000001693370c0f0 00000000000000d8   ..p3i...........
+0x00000032b4afbed0:   00000032b4afc588 000001693372cc0e   ....2.....r3i...
+0x00000032b4afbee0:   0000000000000048 00000169337862e0   H........bx3i...
+0x00000032b4afbef0:   0000000000000003 00000169112b23d0   .........#+.i...
+0x00000032b4afbf00:   00000032b4afbfb0 0000000000000000   ....2...........
+0x00000032b4afbf10:   0000000000000020 00007ffbf2fc1df2    ...............
+0x00000032b4afbf20:   00000169308e3d01 00007ffbf2c1405b   .=.0i...[@......
+0x00000032b4afbf30:   0000000000057a01 0000016900000000   .z..........i...
+0x00000032b4afbf40:   0000000000000000 00000000825fdb00   .........._.....
+0x00000032b4afbf50:   0000016930a6e578 00000169308e3df0   x..0i....=.0i...
+0x00000032b4afbf60:   0000000000000000 00007ffbf2fc1f05   ................
+0x00000032b4afbf70:   00000032b4afc078 0000000000000000   x...2...........
+0x00000032b4afbf80:   00000169337862e0 00000169308e3df0   .bx3i....=.0i...
+
+Instructions: (pc=0x00007ffc9516c1c4)
+  0x00007ffc9516c0c4:   00 00 03 72 2d 44 8b ce 48 8d 05 3d e0 01 00 ba
+  0x00007ffc9516c0d4:   2f 00 00 00 4e 8b 0c c8 48 8b 89 b0 02 00 00 4c
+  0x00007ffc9516c0e4:   8d 05 56 df 01 00 e8 51 50 ff ff 48 8b 0d ea 38
+  0x00007ffc9516c0f4:   02 00 48 3b cb 74 68 f6 81 bc 02 00 00 10 74 5f
+  0x00007ffc9516c104:   80 b9 b9 02 00 00 02 72 56 4c 8b 8c 24 90 00 00
+  0x00007ffc9516c114:   00 4c 8d 05 24 df 01 00 48 8b 89 b0 02 00 00 ba
+  0x00007ffc9516c124:   31 00 00 00 e8 13 50 ff ff eb 34 49 8b 0f 4c 8b
+  0x00007ffc9516c134:   c3 48 8b d6 e8 d3 63 00 00 48 8b 84 24 b0 00 00
+  0x00007ffc9516c144:   00 89 18 48 8b 0d 6a 4c 02 00 4c 8b c6 33 d2 ff
+  0x00007ffc9516c154:   15 87 50 01 00 eb 08 a8 02 75 04 c6 47 40 01 b8
+  0x00007ffc9516c164:   ff ff ff ff f0 0f c1 47 10 4c 8b b4 24 88 00 00
+  0x00007ffc9516c174:   00 83 f8 01 75 42 48 8b 4f 18 48 81 c1 70 01 00
+  0x00007ffc9516c184:   00 ff 15 1d 51 01 00 48 8b 0f 48 8b 47 08 48 89
+  0x00007ffc9516c194:   08 48 89 41 08 48 8b 4f 18 48 81 c1 70 01 00 00
+  0x00007ffc9516c1a4:   ff 15 06 51 01 00 48 8b 0d 07 4c 02 00 4c 8b c7
+  0x00007ffc9516c1b4:   33 d2 ff 15 24 50 01 00 48 8b 4d 20 48 8b 55 10
+=>0x00007ffc9516c1c4:   48 8b 01 48 8b 80 08 01 00 00 ff 15 0c 51 01 00
+  0x00007ffc9516c1d4:   85 c0 74 40 48 8b 0d 01 38 02 00 48 8d 15 fa 37
+  0x00007ffc9516c1e4:   02 00 48 3b ca 74 2d f6 81 bc 02 00 00 10 74 24
+  0x00007ffc9516c1f4:   80 b9 b9 02 00 00 03 72 1b 48 8b 89 b0 02 00 00
+  0x00007ffc9516c204:   4c 8d 05 35 de 01 00 ba 15 00 00 00 44 8b c8 e8
+  0x00007ffc9516c214:   68 4e ff ff 48 8b 6c 24 78 48 8b b4 24 80 00 00
+  0x00007ffc9516c224:   00 48 83 c4 50 41 5f 5f 5b c3 cc cc 40 57 48 83
+  0x00007ffc9516c234:   ec 30 f6 81 78 01 00 00 04 48 8b f9 0f 85 87 02
+  0x00007ffc9516c244:   00 00 48 89 5c 24 40 45 33 c9 48 89 6c 24 48 33
+  0x00007ffc9516c254:   d2 48 89 74 24 50 48 8b 71 20 45 8d 41 32 48 8b
+  0x00007ffc9516c264:   ce 48 8b 06 48 8b 40 08 ff 15 6e 50 01 00 48 8d
+  0x00007ffc9516c274:   2d 67 37 02 00 85 c0 74 37 48 8b 0d 5c 37 02 00
+  0x00007ffc9516c284:   48 3b cd 74 2b f6 81 bc 02 00 00 10 74 22 80 b9
+  0x00007ffc9516c294:   b9 02 00 00 02 72 19 48 8b 89 b0 02 00 00 ba 11
+  0x00007ffc9516c2a4:   00 00 00 89 44 24 20 44 8d 4a 21 e8 7c dc ff ff
+  0x00007ffc9516c2b4:   48 8b 06 45 33 c9 33 d2 48 8b ce 48 8b 40 08 45
+
+
+Stack slot to memory mapping:
+
+stack at sp + 0 slots: 0x00000169337bc498 points into unknown readable memory: 0x6f696e2f6176616a | 6a 61 76 61 2f 6e 69 6f
+stack at sp + 1 slots: 0x0000016933786728 points into unknown readable memory: 0x00007ffbf3666b50 | 50 6b 66 f3 fb 7f 00 00
+stack at sp + 2 slots: 0x0 is null
+stack at sp + 3 slots: 

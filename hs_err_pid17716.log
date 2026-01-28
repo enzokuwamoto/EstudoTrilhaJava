@@ -1,0 +1,203 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffc9516c1c4, pid=17716, tid=19836
+#
+# JRE version: OpenJDK Runtime Environment (25.0.1+8) (build 25.0.1+8-27)
+# Java VM: OpenJDK 64-Bit Server VM (25.0.1+8-27, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# Problematic frame:
+# C  [cyjagent.dll+0xc1c4]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -javaagent:C:\Users\enzoyano\AppData\Local\Programs\IntelliJ IDEA Community Edition 2025.2.4\lib\idea_rt.jar=59039 -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -agentpath:C:\Program Files\Palo Alto Networks\Traps\cyjagent.dll ZZAcollections.test.BinarySearchTest01
+
+Host: 12th Gen Intel(R) Core(TM) i5-1235U, 12 cores, 15G,  Windows 11 , 64 bit Build 22621 (10.0.22621.5415)
+Time: Thu Jan 22 07:29:57 2026 Hora oficial do Brasil elapsed time: 0.217461 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000002097e7c9c40):  JavaThread "Monitor Ctrl-Break" daemon [_thread_in_native, id=19836, stack(0x000000b986300000,0x000000b986400000) (1024K)]
+
+Stack: [0x000000b986300000,0x000000b986400000],  sp=0x000000b9863fb6e0,  free space=1005k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [cyjagent.dll+0xc1c4]  (no source info available)
+V  [jvm.dll+0x64a5e8]  (no source info available)
+V  [jvm.dll+0x641df2]  (no source info available)
+V  [jvm.dll+0x641f05]  (no source info available)
+V  [jvm.dll+0x6685c2]  (no source info available)
+V  [jvm.dll+0x8d5049]  (no source info available)
+V  [jvm.dll+0x8d4bf9]  (no source info available)
+V  [jvm.dll+0x8d5d1a]  (no source info available)
+V  [jvm.dll+0x8d6426]  (no source info available)
+V  [jvm.dll+0x8d1452]  (no source info available)
+V  [jvm.dll+0x8d4f85]  (no source info available)
+V  [jvm.dll+0x8d4bf9]  (no source info available)
+V  [jvm.dll+0x8d5d1a]  (no source info available)
+V  [jvm.dll+0x8d6252]  (no source info available)
+V  [jvm.dll+0x8d5fa6]  (no source info available)
+V  [jvm.dll+0x2e5322]  (no source info available)
+V  [jvm.dll+0x47158e]  (no source info available)
+C  0x000002090754a858  (no source info available)
+
+The last pc belongs to new (printed below).
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  sun.nio.ch.FileChannelImpl.<clinit>()V+22 java.base@25.0.1
+v  ~StubRoutines::call_stub 0x00000209075312ed
+j  sun.nio.fs.WindowsChannelFactory.newFileChannel(Ljava/lang/String;Ljava/util/Set;J)Ljava/nio/channels/FileChannel;+146 java.base@25.0.1
+j  sun.nio.fs.WindowsFileSystemProvider.newByteChannel(Ljava/nio/file/Path;Ljava/util/Set;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/channels/SeekableByteChannel;+23 java.base@25.0.1
+j  java.nio.file.Files.newByteChannel(Ljava/nio/file/Path;Ljava/util/Set;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/channels/SeekableByteChannel;+7 java.base@25.0.1
+j  java.nio.file.Files.newByteChannel(Ljava/nio/file/Path;[Ljava/nio/file/OpenOption;)Ljava/nio/channels/SeekableByteChannel;+32 java.base@25.0.1
+j  java.nio.file.spi.FileSystemProvider.newInputStream(Ljava/nio/file/Path;[Ljava/nio/file/OpenOption;)Ljava/io/InputStream;+79 java.base@25.0.1
+j  java.nio.file.Files.newInputStream(Ljava/nio/file/Path;[Ljava/nio/file/OpenOption;)Ljava/io/InputStream;+6 java.base@25.0.1
+j  java.security.Security$SecPropLoader.loadFromPath(Ljava/nio/file/Path;Ljava/security/Security$SecPropLoader$LoadingMode;)V+104 java.base@25.0.1
+j  java.security.Security$SecPropLoader.loadMaster()V+28 java.base@25.0.1
+j  java.security.Security$SecPropLoader.loadAll()V+0 java.base@25.0.1
+j  java.security.Security.initialize()V+0 java.base@25.0.1
+j  java.security.Security.<clinit>()V+19 java.base@25.0.1
+v  ~StubRoutines::call_stub 0x00000209075312ed
+j  sun.security.util.SecurityProperties.getOverridableProperty(Ljava/lang/String;)Ljava/lang/String;+10 java.base@25.0.1
+j  sun.security.util.SecurityProperties.includedInExceptions(Ljava/lang/String;)Z+2 java.base@25.0.1
+j  sun.security.util.SecurityProperties.<clinit>()V+2 java.base@25.0.1
+v  ~StubRoutines::call_stub 0x00000209075312ed
+j  jdk.internal.util.Exceptions.setup()V+15 java.base@25.0.1
+j  java.net.InetAddress.<clinit>()V+43 java.base@25.0.1
+v  ~StubRoutines::call_stub 0x00000209075312ed
+j  java.net.InetSocketAddress.<init>(Ljava/lang/String;I)V+15 java.base@25.0.1
+j  java.net.Socket.<init>(Ljava/lang/String;I)V+11 java.base@25.0.1
+j  com.intellij.rt.execution.application.AppMainV2$1.run()V+10
+v  ~StubRoutines::call_stub 0x00000209075312ed
+
+siginfo: EXCEPTION_ACCESS_VIOLATION (0xc0000005), reading address 0x0000000000000000
+
+
+Registers:
+RAX=0x0000000000000000, RBX=0x000002097e7ca088, RCX=0x0000000000000000, RDX=0x00000209724b0a20
+RSP=0x000000b9863fb6e0, RBP=0x000002097203f8d0, RSI=0x0000000000000000, RDI=0x00000209171af700
+R8 =0x000002096fb53000, R9 =0x0000000000000001, R10=0x0000000000000003, R11=0x000000b9863fb560
+R12=0x00000209171af700, R13=0x000002097e7c9c40, R14=0x000002097e7c9c40, R15=0x0000000000000000
+RIP=0x00007ffc9516c1c4, EFLAGS=0x0000000000010202
+
+XMM[0]=0x0000000000000000 0x0000000000000000
+XMM[1]=0x0000000000000000 0x0000000000000000
+XMM[2]=0x0000000000000000 0x0000000000000000
+XMM[3]=0x0000000000000000 0x0000000000000000
+XMM[4]=0x0000000000000000 0x0000000000000000
+XMM[5]=0x0000000000000000 0x0000000000000000
+XMM[6]=0x0000000000000000 0x0000000000000000
+XMM[7]=0x0000000000000000 0x0000000000000000
+XMM[8]=0x0000000000000000 0x0000000000000000
+XMM[9]=0x0000000000000000 0x0000000000000000
+XMM[10]=0x0000000000000000 0x0000000000000000
+XMM[11]=0x0000000000000000 0x0000000000000000
+XMM[12]=0x0000000000000000 0x0000000000000000
+XMM[13]=0x0000000000000000 0x0000000000000000
+XMM[14]=0x0000000000000000 0x0000000000000000
+XMM[15]=0x0000000000000000 0x0000000000000000
+  MXCSR=0x00001fa0
+
+
+Register to memory mapping:
+
+RAX=0x0 is null
+RBX=0x000002097e7ca088 points into unknown readable memory: 0x00007ffc00bf6b50 | 50 6b bf 00 fc 7f 00 00
+RCX=0x0 is null
+RDX=0x00000209724b0a20 points into unknown readable memory: 0x000002097e7c9c40 | 40 9c 7c 7e 09 02 00 00
+RSP=0x000000b9863fb6e0 is pointing into the stack for thread: 0x000002097e7c9c40
+RBP=0x000002097203f8d0 points into unknown readable memory: 0x0000020971f99ac0 | c0 9a f9 71 09 02 00 00
+RSI=0x0 is null
+RDI=0x00000209171af700 points into unknown readable memory: 0x2f6f696e2f6e7573 | 73 75 6e 2f 6e 69 6f 2f
+R8 =0x000002096fb53000 points into unknown readable memory: 0x000002096fb50db0 | b0 0d b5 6f 09 02 00 00
+R9 =0x0000000000000001 is an unknown value
+R10=0x0000000000000003 is an unknown value
+R11=0x000000b9863fb560 is pointing into the stack for thread: 0x000002097e7c9c40
+R12=0x00000209171af700 points into unknown readable memory: 0x2f6f696e2f6e7573 | 73 75 6e 2f 6e 69 6f 2f
+R13=0x000002097e7c9c40 is a thread
+R14=0x000002097e7c9c40 is a thread
+R15=0x0 is null
+
+Top of Stack: (sp=0x000000b9863fb6e0)
+0x000000b9863fb6e0:   00000209171af700 000002097e7ca088   ..........|~....
+0x000000b9863fb6f0:   0000000000000000 00007ffc8a962910   .........)......
+0x000000b9863fb700:   0000000000000003 0000000000000641   ........A.......
+0x000000b9863fb710:   000000000867c0c0 000002097203f8d0   ..g........r....
+0x000000b9863fb720:   0000000000000019 000000b9863fb900   ..........?.....
+0x000000b9863fb730:   000002096fca4710 000000b9863fb938   .G.o....8.?.....
+0x000000b9863fb740:   000000b9863fb930 00007ffc0055a5e8   0.?.......U.....
+0x000000b9863fb750:   000002096fca4710 0000000000000000   .G.o............
+0x000000b9863fb760:   000000b9863fb900 0000000000000000   ..?.............
+0x000000b9863fb770:   00000209171af700 0000000000000000   ................
+0x000000b9863fb780:   0000020900000641 00000209171af088   A...............
+0x000000b9863fb790:   000000b9863fb888 000000b9863fb7a8   ..?.......?.....
+0x000000b9863fb7a0:   0000020900000000 0000000000000000   ................
+0x000000b9863fb7b0:   0000000000000000 0000000000000000   ................
+0x000000b9863fb7c0:   0000020917174db0 00000209171af070   .M......p.......
+0x000000b9863fb7d0:   00000209171af720 00000209171b7060    .......`p......
+0x000000b9863fb7e0:   00000000000083b0 000002097e7c9c40   ........@.|~....
+0x000000b9863fb7f0:   000002097e7c9c40 00000209171749b0   @.|~.....I......
+0x000000b9863fb800:   0000020917199e00 0000020917199e40   ........@.......
+0x000000b9863fb810:   0000020917199ef0 00000000000000d8   ................
+0x000000b9863fb820:   000000b9863fbed8 0000020917174db0   ..?......M......
+0x000000b9863fb830:   0000000000000048 000002097e7c9c40   H.......@.|~....
+0x000000b9863fb840:   0000000000000003 000002096fca4710   .........G.o....
+0x000000b9863fb850:   000000b9863fb900 0000000000000000   ..?.............
+0x000000b9863fb860:   0000000000000020 00007ffc00551df2    .........U.....
+0x000000b9863fb870:   000002097e7b9a01 00007ffc001a405b   ..{~....[@......
+0x000000b9863fb880:   000000000000ec01 0000020900000000   ................
+0x000000b9863fb890:   0000000000000000 000000000867c0c0   ..........g.....
+0x000000b9863fb8a0:   000002097e92c818 000002097e7b9ab0   ...~......{~....
+0x000000b9863fb8b0:   0000000000000000 00007ffc00551f05   ..........U.....
+0x000000b9863fb8c0:   000000b9863fb9c8 0000000000000000   ..?.............
+0x000000b9863fb8d0:   000002097e7c9c40 000002097e7b9ab0   @.|~......{~....
+
+Instructions: (pc=0x00007ffc9516c1c4)
+  0x00007ffc9516c0c4:   00 00 03 72 2d 44 8b ce 48 8d 05 3d e0 01 00 ba
+  0x00007ffc9516c0d4:   2f 00 00 00 4e 8b 0c c8 48 8b 89 b0 02 00 00 4c
+  0x00007ffc9516c0e4:   8d 05 56 df 01 00 e8 51 50 ff ff 48 8b 0d ea 38
+  0x00007ffc9516c0f4:   02 00 48 3b cb 74 68 f6 81 bc 02 00 00 10 74 5f
+  0x00007ffc9516c104:   80 b9 b9 02 00 00 02 72 56 4c 8b 8c 24 90 00 00
+  0x00007ffc9516c114:   00 4c 8d 05 24 df 01 00 48 8b 89 b0 02 00 00 ba
+  0x00007ffc9516c124:   31 00 00 00 e8 13 50 ff ff eb 34 49 8b 0f 4c 8b
+  0x00007ffc9516c134:   c3 48 8b d6 e8 d3 63 00 00 48 8b 84 24 b0 00 00
+  0x00007ffc9516c144:   00 89 18 48 8b 0d 6a 4c 02 00 4c 8b c6 33 d2 ff
+  0x00007ffc9516c154:   15 87 50 01 00 eb 08 a8 02 75 04 c6 47 40 01 b8
+  0x00007ffc9516c164:   ff ff ff ff f0 0f c1 47 10 4c 8b b4 24 88 00 00
+  0x00007ffc9516c174:   00 83 f8 01 75 42 48 8b 4f 18 48 81 c1 70 01 00
+  0x00007ffc9516c184:   00 ff 15 1d 51 01 00 48 8b 0f 48 8b 47 08 48 89
+  0x00007ffc9516c194:   08 48 89 41 08 48 8b 4f 18 48 81 c1 70 01 00 00
+  0x00007ffc9516c1a4:   ff 15 06 51 01 00 48 8b 0d 07 4c 02 00 4c 8b c7
+  0x00007ffc9516c1b4:   33 d2 ff 15 24 50 01 00 48 8b 4d 20 48 8b 55 10
+=>0x00007ffc9516c1c4:   48 8b 01 48 8b 80 08 01 00 00 ff 15 0c 51 01 00
+  0x00007ffc9516c1d4:   85 c0 74 40 48 8b 0d 01 38 02 00 48 8d 15 fa 37
+  0x00007ffc9516c1e4:   02 00 48 3b ca 74 2d f6 81 bc 02 00 00 10 74 24
+  0x00007ffc9516c1f4:   80 b9 b9 02 00 00 03 72 1b 48 8b 89 b0 02 00 00
+  0x00007ffc9516c204:   4c 8d 05 35 de 01 00 ba 15 00 00 00 44 8b c8 e8
+  0x00007ffc9516c214:   68 4e ff ff 48 8b 6c 24 78 48 8b b4 24 80 00 00
+  0x00007ffc9516c224:   00 48 83 c4 50 41 5f 5f 5b c3 cc cc 40 57 48 83
+  0x00007ffc9516c234:   ec 30 f6 81 78 01 00 00 04 48 8b f9 0f 85 87 02
+  0x00007ffc9516c244:   00 00 48 89 5c 24 40 45 33 c9 48 89 6c 24 48 33
+  0x00007ffc9516c254:   d2 48 89 74 24 50 48 8b 71 20 45 8d 41 32 48 8b
+  0x00007ffc9516c264:   ce 48 8b 06 48 8b 40 08 ff 15 6e 50 01 00 48 8d
+  0x00007ffc9516c274:   2d 67 37 02 00 85 c0 74 37 48 8b 0d 5c 37 02 00
+  0x00007ffc9516c284:   48 3b cd 74 2b f6 81 bc 02 00 00 10 74 22 80 b9
+  0x00007ffc9516c294:   b9 02 00 00 02 72 19 48 8b 89 b0 02 00 00 ba 11
+  0x00007ffc9516c2a4:   00 00 00 89 44 24 20 44 8d 4a 21 e8 7c dc ff ff
+  0x00007ffc9516c2b4:   48 8b 06 45 33 c9 33 d2 48 8b ce 48 8b 40 08 45
+
+
+Stack slot to memory mapping:
+
+stack at sp + 0 slots: 0x00000209171af700 points into unknown readable memory: 0x2f6f696e2f6e7573 | 73 75 6e 2f 6e 69 6f 2f
+stack at sp + 1 slots: 0x000002097e7ca088 points into unknown readable memory: 0x00007ffc00bf6b50 | 50 6b bf 00 fc 7f 00 00
+stack at sp + 2 slots: 0x0 is null
+stack at sp + 3 slots: 0x00007ffc8a962910 jimage.dll
+stack at sp + 4 slots: 0x0000000000000003 is an unknown value
+stack at sp + 5 slots: 
